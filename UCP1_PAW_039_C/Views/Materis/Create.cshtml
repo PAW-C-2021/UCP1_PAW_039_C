@@ -1,0 +1,58 @@
+﻿@model UCP1_PAW_039_C.Models.Materi
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Materi</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdMateri" class="control-label"></label>
+                <input asp-for="IdMateri" class="form-control" />
+                <span asp-validation-for="IdMateri" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Materi1" class="control-label"></label>
+                <input asp-for="Materi1" class="form-control" />
+                <span asp-validation-for="Materi1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Serach" class="control-label"></label>
+                <input asp-for="Serach" class="form-control" />
+                <span asp-validation-for="Serach" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UrlMateri" class="control-label"></label>
+                <input asp-for="UrlMateri" class="form-control" />
+                <span asp-validation-for="UrlMateri" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UrlVideo" class="control-label"></label>
+                <input asp-for="UrlVideo" class="form-control" />
+                <span asp-validation-for="UrlVideo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UrlPicture" class="control-label"></label>
+                <input asp-for="UrlPicture" class="form-control" />
+                <span asp-validation-for="UrlPicture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
